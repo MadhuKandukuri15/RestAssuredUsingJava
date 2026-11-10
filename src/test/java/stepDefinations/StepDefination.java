@@ -28,6 +28,7 @@ public class StepDefination extends Utils{
 
 		rs = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 		res = given().spec(specBuilder()).body(tb.addPlace());
+		System.out.println("build got succesfull");
 
 	}
 
