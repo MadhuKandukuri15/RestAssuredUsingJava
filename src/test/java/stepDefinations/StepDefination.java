@@ -23,13 +23,11 @@ public class StepDefination extends Utils {
 	Response response;
 	TestDataBuild tb = new TestDataBuild();
 
-
 	@Given("Add place payload")
 	public void add_place_payload() throws FileNotFoundException {
 		// Write code here that turns the phrase above into concrete actions
 
 		res = given().spec(specBuilder()).body(tb.addPlace());
-	
 
 	}
 
@@ -49,22 +47,21 @@ public class StepDefination extends Utils {
 	}
 
 	@Then("{string} in response body is {string}")
-	public void is_response_body_is(String string, String string2) {
+	public void is_response_body_is(String status, String value) {
 		String s = response.asString();
 		JsonPath js = new JsonPath(s);
-		String r = js.get(string);
-		System.out.println(r);
+		String respValue = js.get(status);
 
-		assertEquals(r, string2);
+		assertEquals(respValue, value);
 
 	}
 
 	@Then("{string} in response body {string}")
-	public void in_response_body(String string, String string2) {
+	public void in_response_body(String scope, String value) {
 		String s = response.asString();
 		JsonPath js = new JsonPath(s);
-		String r = js.get(string);
-		assertEquals(r, string2);
+		String r = js.get(scope);
+		assertEquals(r, value);
 
 		System.out.println("Scope verified succesfully");
 	}
