@@ -66,6 +66,7 @@ public class StepDefination extends Utils{
 		String r = js.get(string);
 		assertEquals(r, string2);
 
+		System.out.println("Scope verified succesfully");
 	}
 
 }
