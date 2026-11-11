@@ -23,15 +23,20 @@ public class StepDefination extends Utils {
 	Response response;
 	TestDataBuild tb = new TestDataBuild();
 
+
 	@Given("Add place payload")
 	public void add_place_payload() throws FileNotFoundException {
 		// Write code here that turns the phrase above into concrete actions
 
 		res = given().spec(specBuilder()).body(tb.addPlace());
+	
+
+	}
 
 	@When("user calls {string} with Post request")
 	public void user_calls_with_post_request(String string) {
 		rs = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+
 		response = res.when().post("/maps/api/place/add/json").then().spec(rs).extract().response();
 		// Write code here that turns the phrase above into concrete actions
 
