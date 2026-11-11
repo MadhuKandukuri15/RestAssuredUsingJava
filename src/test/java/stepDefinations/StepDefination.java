@@ -29,6 +29,7 @@ public class StepDefination extends Utils{
 		rs = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 		res = given().spec(specBuilder()).body(tb.addPlace());
 		System.out.println("build got succesfull");
+		
 
 	}
 
@@ -43,7 +44,7 @@ public class StepDefination extends Utils{
 	public void the_api_call_got_success_with_status_code(Integer int1) {
 		// Write code here that turns the phrase above into concrete actions
 		assertEquals(response.getStatusCode(), 200);
-		
+		System.out.println("Status code verified");
 
 	}
 
