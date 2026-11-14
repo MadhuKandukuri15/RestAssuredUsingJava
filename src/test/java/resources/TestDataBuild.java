@@ -7,13 +7,13 @@ import pojo.AddPlace;
 import pojo.Location;
 
 public class TestDataBuild {
-	
-	public AddPlace addPlace() {
+
+	public AddPlace addPlace(String name, String language, String address) {
 		AddPlace m = new AddPlace();
 		m.setAccuracy(50);
-		m.setAddress("29, side layout, cohen 09");
-		m.setLanguage("French-IN");
-		m.setName("Frontline house");
+		m.setAddress(address);
+		m.setLanguage(language);
+		m.setName(name);
 		m.setPhone_number("(+91) 983 893 3937");
 		m.setWebsite("http://google.com");
 		Location Lt = new Location();
@@ -26,6 +26,11 @@ public class TestDataBuild {
 		m.setTypes(l);
 		m.setLocation(Lt);
 		return m;
+	}
+public String deletePlaceusingPlaceid(String placeid) {
+		
+		return "{\r\n  \"place_id\": \""+placeid+"\"\r\n}";
+
 	}
 
 }

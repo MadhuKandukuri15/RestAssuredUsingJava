@@ -14,13 +14,7 @@
 			<version>6.3.0</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-	
-		<!-- Source:
-		https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-		<!-- Source:
-		https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -32,7 +26,12 @@
 			<artifactId>cucumber-junit</artifactId>
 			<version>7.20.1</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>9.0.0</version>
+		</dependency>
+
 		<!-- Source:
 		https://mvnrepository.com/artifact/tools.jackson.core/jackson-databind -->
 		<dependency>
